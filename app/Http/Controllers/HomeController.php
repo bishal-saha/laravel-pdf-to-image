@@ -35,7 +35,7 @@ class HomeController extends Controller
             if($pdf->getNumberOfPages() > 1) {
                 //using if to account for possible count of 0, rather than just relying on the loop
                 for ($i = 1; $i <= $pageLimit; $i++) {
-                    $imageName = $filePath.'/'.$i . ".png";
+                    $imageName = $filePath.'/'.$i . ".jpg";
                     $pdf->setPage($i)->saveImage($imageName);
                 }
             } else {
